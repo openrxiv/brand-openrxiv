@@ -10,7 +10,7 @@ color:
   primary: green
 
 logo: 
-  medium: openrxiv-logo.png
+  medium: logos/openrxiv-logo.png
 
 typography:
   fonts:
