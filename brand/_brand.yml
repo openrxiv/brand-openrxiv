@@ -1,0 +1,31 @@
+color:
+  palette:
+    black: "#000000"
+    dark-green: "#1F2A20"
+    light-gray: "#EAEAEA"
+    green: "#00BE27"
+    violet: "#D3CFEA"
+  background: light-gray
+  foreground: dark-green
+  primary: green
+
+logo: 
+  medium: openrxiv-logo.png
+
+typography:
+  fonts:
+    - family: Geist
+      source: google
+    - family: Space Mono
+      source: google
+  base: Geist
+  headings: Geist
+  link:
+    decoration: underline
+  monospace: Space Mono
+  monospace-inline:
+    color: dark-green
+    background-color: light-gray
+  monospace-block: 
+    background-color: violet
+
