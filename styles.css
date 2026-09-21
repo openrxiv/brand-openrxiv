@@ -26,12 +26,17 @@
 }
 
 .reveal .slides > section {
-  min-height: calc(100vh) !important; 
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
   padding-bottom: 90px !important;
   box-sizing: border-box !important;
+}
+
+/* Center standalone plot/figure images (Reveal's default is flush-left) */
+.reveal .slides > section > img.r-stretch {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .reveal figcaption {
