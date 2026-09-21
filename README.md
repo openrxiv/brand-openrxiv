@@ -18,3 +18,12 @@ format:
     footer: " "
     brand: shared-brand/_brand.yml
 ```
+
+After cloning a repo that contains the brand files in this way, you'll see that an empty folder called `shared-brand` is created. You will need to run the following in the terminal to laod them:
+
+```bash
+git submodule init
+git submodule update
+```
+
+See [Git Tools — Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for details.
