@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the `_brand.yml` and custom `styles.css` for openRxiv to be used with Quarto documents.
+This repository contains the `_brand.yml` and custom `styles.scss` for openRxiv to be used with Quarto documents.
 
 The brand implements the corporate colors, font, and logo for openRxiv.
 
