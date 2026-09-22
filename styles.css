@@ -1,0 +1,62 @@
+/* Green line above logo in footer - from left to 20px from right */
+.reveal .footer {
+  padding-top: 50px !important;
+  position: relative;
+  overflow: visible;
+}
+
+.reveal .footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: calc(100% - 140px);
+  height: 3px;
+  background-color: #00BE27;
+}
+
+/* Prevent slide content from overlapping footer */
+/* .reveal {
+  height: calc(100vh) !important; /*- 120px
+} */
+
+/* Center title slide content vertically */
+#title-slide {
+  justify-content: center !important;
+}
+
+.reveal .slides > section {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  padding-bottom: 90px !important;
+  box-sizing: border-box !important;
+}
+
+/* Center standalone plot/figure images (Reveal's default is flush-left) */
+.reveal .slides > section > img.r-stretch {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.reveal figcaption {
+  margin-bottom: 20px !important;
+}
+
+/* Add space after figures to prevent overlap */
+.reveal figure {
+  margin-bottom: 30px !important;
+}
+
+/* Position progress bar at bottom of viewport */
+.reveal .progress {
+  bottom: 0 !important;
+  top: auto !important;
+  position: fixed !important;
+}
+
+/* Title slide top-right content positioning */
+/* #title-slide {
+  position: relative !important;
+} */
+ 
