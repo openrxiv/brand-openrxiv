@@ -1,13 +1,19 @@
 color:
   palette:
-    black: "#000000"
+    black: "#0B0903"
+    white: "#FFFFFF"
+    bright-green: "#00BE27"
+    medium-green: "#027116"
     dark-green: "#1F2A20"
     light-gray: "#EAEAEA"
-    green: "#00BE27"
-    violet: "#D3CFEA"
-  background: light-gray
-  foreground: dark-green
-  primary: green
+    dark-gray: "#1F2A20"
+    light-blue: "#C9EAE7"
+    cream: "#EBE9C7"
+    purple: "#B6B1D7"
+  background: white
+  foreground: black
+  primary: medium-green
+  secondary: bright-green
 
 logo: 
   medium: logos/openrxiv-logo.png
@@ -22,10 +28,17 @@ typography:
   headings: Geist
   link:
     decoration: underline
+    color: secondary
   monospace: Space Mono
   monospace-inline:
     color: dark-green
     background-color: light-gray
-  monospace-block: 
-    background-color: violet
+  monospace-block:
+    color: medium-green
+    background-color: light-gray
 
+defaults:
+  bootstrap:
+    defaults:
+      navbar-bg: "$brand-light-gray"  
+      navbar-fg: "$brand-black"

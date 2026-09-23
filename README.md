@@ -1,4 +1,14 @@
-# openRxiv brand in YAML
+---
+brand: _brand.yml
+format:
+    html:
+        css: styles.css
+        highlight-style: github
+
+---
+
+
+# openRxiv brand in YAML 
 
 ## Description
 
@@ -19,7 +29,7 @@ This copies brand files from the external source into your project’s `_brand/`
 
 It does not copy the `styles.css` or `styles.scss` files. To use a style file in this repo, you can add the following to the yaml header of your Quarto doc:
 
-```yaml
+```{.yaml .code-overflow-wrap}
 format:
     #[html, revealjs]:
         css: https://cdn.jsdelivr.net/gh/openrxiv/brand-openrxiv@main/[path-to-css-from-root]

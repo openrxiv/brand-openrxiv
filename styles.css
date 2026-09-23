@@ -12,7 +12,7 @@
   left: 100px;
   width: calc(100% - 140px);
   height: 3px;
-  background-color: #00BE27;
+  background-color: var(--brand-bright-green);
 }
 
 /* Prevent slide content from overlapping footer */

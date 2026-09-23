@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>readme</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -61,17 +67,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="README_files/libs/clipboard/clipboard.min.js"></script>
 <script src="README_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="README_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="README_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="README_files/libs/quarto-html/popper.min.js"></script>
 <script src="README_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="README_files/libs/quarto-html/anchor.min.js"></script>
 <link href="README_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="README_files/libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="README_files/libs/quarto-html/quarto-syntax-highlighting-582482ca35cd5e9d0e6d6ff9c7987b4b.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="README_files/libs/quarto-html/quarto-syntax-highlighting-dark-2039106661e696b7ce690d43d92f08bb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="README_files/libs/quarto-html/quarto-syntax-highlighting-582482ca35cd5e9d0e6d6ff9c7987b4b.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="README_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="README_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="README_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="README_files/libs/bootstrap/bootstrap-fbce2454f9eaf0d14621a80043c075d5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="README_files/libs/bootstrap/bootstrap-dark-fbce2454f9eaf0d14621a80043c075d5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="README_files/libs/bootstrap/bootstrap-fbce2454f9eaf0d14621a80043c075d5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -85,24 +95,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="openrxiv-brand-in-yaml" class="level1">
 <h1>openRxiv brand in YAML</h1>
+<section id="description" class="level2">
+<h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>This repository contains the <code>_brand.yml</code> and custom <code>styles.scss</code> for openRxiv to be used with Quarto documents.</p>
+<p>The brand implements the corporate colors, font, and logo for openRxiv.</p>
+</section>
 <section id="usage" class="level2">
 <h2 class="anchored" data-anchor-id="usage">Usage</h2>
-<p>The <code>quarto use brand</code> command copies brand files from an external source into your project’s <code>_brand/</code> directory. To use it, navigate to your project directory and run:</p>
-<p><strong>Terminal</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use brand <span class="op">&lt;</span>source<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The source can be a local directory, a GitHub repository, or a URL to a zip archive:</p>
-<p><strong>Terminal</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use brand https://github.com/openrxiv/brand-openrxiv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>When you run the command, Quarto walks you through the following steps:</p>
-<ol type="1">
-<li>If the source is remote, Quarto asks you to confirm that you trust the source.</li>
-<li>If your project doesn’t have a _brand/ directory, Quarto asks to create one.</li>
-<li>For each file that already exists in your _brand/ directory, Quarto asks whether to overwrite it.</li>
-<li>Quarto copies all files from the source to your _brand/ directory.</li>
-<li>If there are files in your <code>_brand/</code> directory that don’t exist in the source, Quarto asks whether to remove them.</li>
-</ol>
-<p>The result is that your <code>_brand/</code> directory will match the source exactly, making it easy to stay in sync with a shared brand as it evolves.</p>
-<p>Source: <a href="https://quarto.org/docs/authoring/brand.html">quarto documentation — Sharing brands across projects</a></p>
+<p>From a folder containing a Quarto document, run in the Terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use brand openrxiv/brand-openrxiv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This copies brand files from the external source into your project’s <code>_brand/</code> directory.</p>
+<p>It does not copy the <code>styles.css</code> or <code>styles.scss</code> files. To use a style file in this repo, you can add the following to the yaml header of your Quarto doc:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-overflow-wrap code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">    #[html, revealjs]:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">css</span><span class="kw">:</span><span class="at"> https://cdn.jsdelivr.net/gh/openrxiv/brand-openrxiv@main/[path-to-css-from-root]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>To convert any path in GitHub to jsDelivr, use this <a href="https://www.jsdelivr.com/github">link</a>.</p>
+<p>For more details: <a href="https://quarto.org/docs/authoring/brand.html#sharing-brands-across-projects">Multiformat branding with _brand.yml</a></p>
 </section>
 </section>
 
